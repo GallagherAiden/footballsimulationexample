@@ -1,0 +1,19 @@
+{
+  "name": "footballsimulationexample",
+  "version": "1.0.0",
+  "description": "an example usage of football simulation engine",
+  "author": "Aiden Gallagher <aiden.g@live.co.uk>",
+  "contributors": [
+    {
+      "name": "Aiden Gallagher",
+      "email": "aiden.g@live.co.uk"
+    }
+  ],
+  "dependencies": {
+    "async": "^2.6.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "footballsimulationengine": "^1.0.3"
+  },
+  "license": "Aiden"
+}
