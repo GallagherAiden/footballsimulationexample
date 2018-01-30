@@ -1,0 +1,193 @@
+{
+  "name": "Team1",
+  "players": [{
+      "name": "Bill Johnson",
+      "position": "GK",
+      "rating": "75",
+      "skill": {
+        "passing": "78",
+        "shooting": "12",
+        "tackling": "65",
+        "saving": "75",
+        "agility": "70",
+        "strength": "60",
+        "penalty_taking": "43",
+        "jumping": "300"
+      },
+      "startPOS": [60,0],
+      "injured": false
+    },
+    {
+      "name": "Fred Johnson",
+      "position": "LB",
+      "rating": "90",
+      "skill": {
+        "passing": "83",
+        "shooting": "40",
+        "saving": "20",
+        "tackling": "32",
+        "saving": "75",
+        "agility": "70",
+        "strength": "60",
+        "penalty_taking": "53",
+        "jumping": "235"
+      },
+      "startPOS": [ 30, 20],
+      "injured": false
+    },
+    {
+      "name": "George Johnson",
+      "position": "CB",
+      "rating": "84",
+      "skill": {
+        "passing": "78",
+        "shooting": "37",
+        "tackling": "21",
+        "saving": "65",
+        "agility": "32",
+        "strength": "99",
+        "penalty_taking": "66",
+        "jumping": "212"
+      },
+      "startPOS": [ 50, 20],
+"injured": false
+    },
+    {
+      "name": "Jim Johnson",
+      "position": "CB",
+      "rating": "75",
+      "skill": {
+        "passing": "33",
+        "shooting": "76",
+        "tackling": "76",
+        "saving": "75",
+        "agility": "70",
+        "strength": "60",
+        "penalty_taking": "21",
+        "jumping": "280"
+      },
+      "startPOS": [ 70, 20],
+"injured": false
+    },
+    {
+      "name": "Georgina Johnson",
+      "position": "RB",
+      "rating": "82",
+      "skill": {
+        "passing": "66",
+        "shooting": "65",
+        "tackling": "81",
+        "saving": "47",
+        "agility": "85",
+        "strength": "23",
+        "penalty_taking": "88",
+        "jumping": "299"
+      },
+      "startPOS": [ 90, 20],
+"injured": false
+    },
+    {
+      "name": "Lucy Johnson",
+      "position": "LM",
+      "rating": "87",
+      "skill": {
+        "passing": "51",
+        "shooting": "88",
+        "tackling": "81",
+        "saving": "75",
+        "agility": "70",
+        "strength": "60",
+        "penalty_taking": "94",
+        "jumping": "250"
+      },
+      "startPOS": [ 30, 120],
+"injured": false
+    },
+    {
+      "name": "Arthur Johnson",
+      "position": "CM",
+      "rating": "41",
+      "skill": {
+        "passing": "33",
+        "shooting": "66",
+        "tackling": "55",
+        "saving": "84",
+        "agility": "39",
+        "strength": "61",
+        "penalty_taking": "1",
+        "jumping": "120"
+      },
+      "startPOS": [ 50, 120],
+"injured": false
+    },
+    {
+      "name": "Cameron Johnson",
+      "position": "CM",
+      "rating": "99",
+      "skill": {
+        "passing": "88",
+        "shooting": "95",
+        "tackling": "91",
+        "saving": "77",
+        "agility": "77",
+        "strength": "66",
+        "penalty_taking": "62",
+        "jumping": "175"
+      },
+      "startPOS": [ 70, 120],
+"injured": false
+    },
+    {
+      "name": "Gill Johnson",
+      "position": "RM",
+      "rating": "79",
+      "skill": {
+        "passing": "56",
+        "shooting": "79",
+        "tackling": "74",
+        "saving": "75",
+        "agility": "70",
+        "strength": "60",
+        "penalty_taking": "32",
+        "jumping": "288"
+      },
+      "startPOS": [ 90, 120],
+"injured": false
+    },
+    {
+      "name": "Peter Johnson",
+      "position": "ST",
+      "rating": "75",
+      "skill": {
+        "passing": "83",
+        "shooting": "88",
+        "tackling": "59",
+        "saving": "84",
+        "agility": "73",
+        "strength": "32",
+        "penalty_taking": "45",
+        "jumping": "291"
+      },
+      "startPOS": [ 50, 270],
+"injured": false
+    },
+    {
+      "name": "Louise Johnson",
+      "position": "ST",
+      "rating": "88",
+      "skill": {
+        "passing": "73",
+        "shooting": "61",
+        "tackling": "44",
+        "saving": "75",
+        "agility": "70",
+        "strength": "60",
+        "penalty_taking": "66",
+        "jumping": "280"
+      },
+      "startPOS": [ 70, 270],
+"injured": false
+    }
+  ],
+  "manager": "Aiden"
+}
