@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Football Simulation Engine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+  #result {
+    width: 100%;
+    float: center;
+  }
+#wrap {
+ width:100%;
+ margin:0 auto;
+}
+#left_col {
+ float:left;
+ width:20%;
+}
+#right_col {
+ float:right;
+ width:80%;
+ overflow: auto;
+ max-height: 500px;
+}
+</style>
+</head>
+<body>
+<h1 id="result">My Match</h1>
+<div id="wrap">
+    <div id="left_col">
+    <canvas id="map" style="border:1px solid #000000; background: url('img/pitch.jpg'); background-size: 100% 100%;">
+  </canvas><br>
+  <button onclick="startMatch()">Start Match</button>
+  <button onclick="getMatch()">Play Match</button>
+  <button onclick="switchSides()">Start Second Half</button>
+  <button onclick="getMatchDetails()">Match Details</button>
+    </div>
+    <div id="right_col">
+    <p id="logging"/>
+    <p id="stats"/>
+</div>
+<script src="js/match.js"></script>
+</body>
+</html>
