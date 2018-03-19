@@ -4,25 +4,11 @@
 This project is an example implementation of the [footballsimulationengine](https://www.npmjs.com/package/footballsimulationengine) node module available on npmjs.
 
 ---
-## Install
+## Install & Start Game
 1. Download the project onto your system ({dir})
 2. cd {dir}
-3. run ``npm install``
----
-## Run the Game
-1. load your team into the {dir}/teams directory (you can use an existing team as an example)
-2. in '{dir}/server.js' change either
-```
-readFile("teams/team1.json").then(function (team1) {
-```
-to your newly created .json file i.e.
-```
-readFile("teams/myTeam.json").then(function (team1) {
-```
-3. Set the pitch size by changing the ``pitchWidth`` and ``pitchHeight`` in '{dir}/server.js'
-*Note: Any changes will need changes made to the start positions of the players*
-4. run ``npm start``
-5. Go To ``http://localhost:1442/match.html``
+3. run ``node server.js``
+4. Go To ``http://localhost:1442/match.html``
 ---
 ## Playing A Match
 1. Press ``start match``
@@ -54,6 +40,4 @@ where X is the number of iterations to do at a time.
 - This flips the players to opposite sides
 5. Press ``play match`` until the iterations reach 10,000
 6. Record the results
-
 ---
-* See a match example [here](https://youtu.be/yxTXFrAZCdY)
