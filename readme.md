@@ -10,9 +10,8 @@ This project is an example implementation of the [footballsimulationengine](http
 3. run ``npm install``
 ---
 ## Run the Game
-1. navigate to the {dir} and run ``npm install``
-2. load your team into the {dir}/teams directory (you can use an existing team as an example)
-3. in '{dir}/server.js' change for team1 and team2:
+1. load your team into the {dir}/teams directory (you can use an existing team as an example)
+2. in '{dir}/server.js' change for team1 and team2:
 ```
 readFile("teams/team1.json").then(function (team1) {
 ```
@@ -22,8 +21,8 @@ readFile("teams/myTeam.json").then(function (team1) {
 ```
 3. Set the pitch size by changing the ``pitchWidth`` and ``pitchHeight`` in '{dir}/teams/pitch.json'
 *Note: Any changes will need changes made to the start positions of the players*
-5. run ``npm start``
-6. Go To ``http://localhost:1442/match.html``
+4. run ``npm start``
+5. Go To ``http://localhost:1442/match.html``
 ---
 ## Playing A Match
 1. Press ``Setup``
