@@ -1,5 +1,6 @@
 {
-  "name": "Team2",
+  "name": "Jaguars",
+    "rating": 88,
   "players": [{
       "name": "Ian Smith",
       "position": "GK",
@@ -15,6 +16,7 @@
         "jumping": "235"
       },
       "startPOS": [ 60 , 0],
+"fitness": 100,
 "injured": false
     },
     {
@@ -32,6 +34,7 @@
         "jumping": "235"
       },
       "startPOS": [ 30, 20 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -49,6 +52,7 @@
         "jumping": "235"
       },
       "startPOS": [ 50, 20 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -66,6 +70,7 @@
         "jumping": "235"
       },
       "startPOS": [ 70, 20 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -83,6 +88,7 @@
         "jumping": "235"
       },
       "startPOS": [ 90, 20 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -100,6 +106,7 @@
         "jumping": "235"
       },
       "startPOS": [ 30, 120 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -117,6 +124,7 @@
         "jumping": "235"
       },
       "startPOS": [ 50, 120 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -134,6 +142,7 @@
         "jumping": "235"
       },
       "startPOS": [ 70, 120 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -151,6 +160,7 @@
         "jumping": "235"
       },
       "startPOS": [ 90, 120 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -168,6 +178,7 @@
         "jumping": "235"
       },
       "startPOS": [ 50, 270 ],
+"fitness": 100,
 "injured": false
     },
     {
@@ -185,6 +196,7 @@
         "jumping": "235"
       },
       "startPOS": [ 70, 270 ],
+"fitness": 100,
 "injured": false
     }
   ],

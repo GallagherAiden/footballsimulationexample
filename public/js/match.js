@@ -1,6 +1,12 @@
+// User Settings
+var gamelength = 12000;
+var speed = 100;
+// -----------------------
 var matchInfo;
 var its = 0;
-var loggingArray = ["", "", "", "", "", "", "", "", "", ""];
+var logs = "";
+let loggingON = false;
+var pause = false;
 
 function startMatch() {
 	setPositions();
@@ -11,7 +17,7 @@ function setPositions() {
 	http.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) {
 			var result = JSON.parse(this.responseText);
-			console.log(result);
+			// console.log(result);
 			var c = document.getElementById("map");
 			var ctx = c.getContext("2d");
 			ctx.canvas.width = result[0];
@@ -19,15 +25,16 @@ function setPositions() {
 			for (i = 2; i < result.length - 1; i++) {
 				ctx.beginPath();
 				ctx.moveTo(result[i], result[i + 1]);
-				ctx.lineTo(result[i] + 1, result[i + 1] + 1);
+				// ctx.lineTo(result[i] + 2, result[i + 1] + 2);
+				ctx.arc(result[i], result[i + 1], 2, 0, 2 * Math.PI);
 				if (i < 24) {
-					ctx.strokeStyle = '#ff0000';
+					ctx.fillStyle = 'red';
 				} else if (i > 12 && i < result.length - 3) {
-					ctx.strokeStyle = '#0000FF';
+					ctx.fillStyle = 'blue';
 				} else {
-					ctx.strokeStyle = '#000000';
+					ctx.fillStyle = 'lime';
 				}
-				ctx.stroke();
+				ctx.fill();
 				i++;
 			}
 			ctx.moveTo(result[result.length - 3], result[result.length - 2]);
@@ -37,15 +44,31 @@ function setPositions() {
 			document.getElementById("result").innerHTML = matchInfo.kickOffTeam.name + ": " + matchInfo.kickOffTeamStatistics.goals + " - " + matchInfo.secondTeamStatistics.goals + " :" + matchInfo.secondTeam.name;
 		}
 	};
-	http.open("GET", "/getStartPos", true);
+	http.open("GET", "/getstartPOS", true);
 	http.send();
 }
 
+function pauseGame() {
+	pause = true;
+}
+
+function playGame() {
+	pause = false;
+	getMatch();
+}
+
 function getMatch() {
-	var iterations = 10;
-	for (i = 0; i < iterations; i++) {
-		movePlayers("/movePlayers");
-	}
+	setInterval(function () {
+		if (pause == true) {
+			clearInterval()
+		} else if (its === (gamelength / 2)) {
+			clearInterval()
+		} else if (its > gamelength) {
+			return
+		} else {
+			movePlayers("/movePlayers");
+		}
+	}, speed);
 }
 
 function movePlayers(endpoint) {
@@ -56,35 +79,29 @@ function movePlayers(endpoint) {
 			var result = JSON.parse(this.responseText);
 			var c = document.getElementById("map");
 			var ctx = c.getContext("2d");
-			console.log(result);
+			// console.log(result);
 			ctx.canvas.width = result[0];
 			ctx.canvas.height = result[1];
 			for (i = 2; i < result.length - 1; i++) {
 				ctx.beginPath();
 				ctx.moveTo(result[i], result[i + 1]);
-				ctx.lineTo(result[i] + 1, result[i + 1] + 1);
+				// ctx.lineTo(result[i] + 4, result[i + 1] + 4);
+				ctx.arc(result[i], result[i + 1], 2, 0, 2 * Math.PI);
 				if (i < 24) {
-					ctx.strokeStyle = '#ff0000';
+					ctx.fillStyle = 'red';
 				} else if (i > 12 && i < result.length - 3) {
-					ctx.strokeStyle = '#0000FF';
+					ctx.fillStyle = 'blue';
 				} else {
-					ctx.strokeStyle = '#000000';
+					ctx.fillStyle = 'lime';
 				}
-				ctx.stroke();
+				ctx.fill();
 				i++;
 			}
 			matchInfo = result[result.length - 1];
-			loggingArray[0] = loggingArray[1];
-			loggingArray[1] = loggingArray[2];
-			loggingArray[2] = loggingArray[3];
-			loggingArray[3] = loggingArray[4];
-			loggingArray[4] = loggingArray[5];
-			loggingArray[5] = loggingArray[6];
-			loggingArray[6] = loggingArray[7];
-			loggingArray[7] = loggingArray[8];
-			loggingArray[8] = loggingArray[9];
-			loggingArray[9] = "Iteration " + its + ": " + result[result.length - 1].iterationLog;
-			document.getElementById("logging").innerHTML = loggingArray[0] + "<br>" + loggingArray[1] + "<br>" + loggingArray[2] + "<br>" + loggingArray[3] + "<br>" + loggingArray[4] + "<br>" + loggingArray[5] + "<br>" + loggingArray[6] + "<br>" + loggingArray[7] + "<br>" + loggingArray[8] + "<br>" + loggingArray[9];
+			logs += "Iteration " + its + ": " + result[result.length - 1].iterationLog + "<br>";
+			if (loggingON) {
+				document.getElementById("logging").innerHTML = logs;
+			}
 			document.getElementById("result").innerHTML = matchInfo.kickOffTeam.name + ": " + matchInfo.kickOffTeamStatistics.goals + " - " + matchInfo.secondTeamStatistics.goals + " :" + matchInfo.secondTeam.name + "   Moves(" + its + ")";
 			var elem = document.getElementById('logging');
 			elem.scrollTop = elem.scrollHeight;
@@ -95,12 +112,13 @@ function movePlayers(endpoint) {
 }
 
 function switchSides() {
+	its++;
 	loggingArray = ["", "", "", "", "", "", "", "", "", ""];
 	var http = new XMLHttpRequest();
 	http.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) {
 			var result = JSON.parse(this.responseText);
-			console.log(result);
+			// console.log(result);
 			var c = document.getElementById("map");
 			var ctx = c.getContext("2d");
 			ctx.canvas.width = result[0];
@@ -108,15 +126,16 @@ function switchSides() {
 			for (i = 2; i < result.length - 3; i++) {
 				ctx.beginPath();
 				ctx.moveTo(result[i], result[i + 1]);
-				ctx.lineTo(result[i] + 1, result[i + 1] + 1);
+				// ctx.lineTo(result[i] + 4, result[i + 1] + 4);
+				ctx.arc(result[i], result[i + 1], 2, 0, 2 * Math.PI);
 				if (i < 24) {
-					ctx.strokeStyle = '#ff0000';
-				} else if (i > 12 && i < result.length - 2) {
-					ctx.strokeStyle = '#0000FF';
+					ctx.fillStyle = 'red';
+				} else if (i > 12 && i < result.length - 3) {
+					ctx.fillStyle = 'blue';
 				} else {
-					ctx.strokeStyle = '#000000';
+					ctx.fillStyle = 'lime';
 				}
-				ctx.stroke();
+				ctx.fill();
 				i++;
 			}
 			ctx.moveTo(result[result.length - 3], result[result.length - 2]);
@@ -130,12 +149,22 @@ function switchSides() {
 	http.send();
 }
 
+function showlogs() {
+	var x = document.getElementById("logging");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+		loggingON = true;
+	} else {
+		x.style.display = "none";
+		loggingON = false;
+	}
+}
+
 function getMatchDetails() {
 	var http = new XMLHttpRequest();
 	http.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) {
-			var mdetails = JSON.parse(this.responseText);
-			document.getElementById("stats").innerHTML = "Half: " + mdetails.half + "<br>" + mdetails.kickOffTeam.name + " Statistics: <br>" + JSON.stringify(mdetails.kickOffTeamStatistics) + "<br>" + mdetails.secondTeam.name + " Statistics: <br>" + JSON.stringify(mdetails.secondTeamStatistics);
+			// console.log("done");
 		}
 	};
 	http.open("GET", "/getMatchDetails", true);

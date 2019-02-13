@@ -7,8 +7,10 @@ var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var async = require("async");
 var http = require("http");
-var footballEngine = require("footballsimulationengine");
+var footballEngine = require("/Users/aideng/Documents/football/footballSimulationEngine");
 var matchInfo;
+var stop = false;
+var its = 0
 
 //---create a new express server-------
 var app = express();
@@ -18,39 +20,37 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-//------------------------
-//    Express Endpoints
-//------------------------
-app.all("/", function (req, res) {
-	return res.redirect('/match.html');
-});
+let pitchSize =
 
-app.get("/getStartPos", function (req, res) {
-	readFile("teams/team1.json").then(function (team1) {
-		readFile("teams/team2.json").then(function (team2) {
-			footballEngine.initiateGame(team1, team2, {
-				"pitchWidth": 120,
-				"pitchHeight": 600
-			}).then(function (matchSetup) {
-				matchInfo = matchSetup;
-				console.log(matchInfo);
-				processPositions(matchInfo.kickOffTeam, matchInfo.secondTeam, matchInfo).then(function (sendArray) {
-					res.send(sendArray);
+	//------------------------
+	//    Express Endpoints
+	//------------------------
+	app.all("/", function (req, res) {
+		return res.redirect('/match.html');
+	});
+
+app.get("/getstartPOS", function (req, res) {
+	readFile("teams/pitch.json").then(function (pitchSize) {
+		readFile("teams/avgPitchTeam1.json").then(function (team1) {
+			readFile("teams/avgPitchTeam2.json").then(function (team2) {
+				footballEngine.initiateGame(team1, team2, pitchSize).then(function (matchSetup) {
+					matchInfo = matchSetup;
+					processPositions(matchInfo.kickOffTeam, matchInfo.secondTeam, matchInfo).then(function (sendArray) {
+						res.send(sendArray);
+					}).catch(function (error) {
+						console.error("Eror when processing positions: ", error);
+					})
 				}).catch(function (error) {
-					console.error("Eror when processing positions: ", error);
-				})
-			}).catch(function (error) {
-				console.error("Error: ", error);
+					console.error("Error: ", error);
+				});
 			});
 		});
 	});
 });
 
 app.get("/startSecondHalf", function (req, res) {
-	console.log(matchInfo);
 	footballEngine.startSecondHalf(matchInfo).then(function (matchSetup) {
 		matchInfo = matchSetup;
-		console.log(matchInfo);
 		processPositions(matchInfo.kickOffTeam, matchInfo.secondTeam, matchInfo).then(function (sendArray) {
 			res.send(sendArray);
 		}).catch(function (error) {
@@ -62,10 +62,9 @@ app.get("/startSecondHalf", function (req, res) {
 });
 
 app.get("/movePlayers", function (req, res) {
-	console.log(matchInfo);
 	footballEngine.playIteration(matchInfo).then(function (matchSetup) {
+		its++;
 		matchInfo = matchSetup;
-		console.log(matchInfo);
 		processPositions(matchInfo.kickOffTeam, matchInfo.secondTeam, matchInfo).then(function (sendArray) {
 			res.send(sendArray);
 		}).catch(function (error) {
@@ -74,6 +73,11 @@ app.get("/movePlayers", function (req, res) {
 	}).catch(function (error) {
 		console.error("Error: ", error);
 	});
+});
+
+app.get("/getMatchDetails", function (req, res) {
+	console.log(matchInfo);
+	res.send();
 });
 
 //------------------------
