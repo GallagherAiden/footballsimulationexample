@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var async = require("async");
 var http = require("http");
-var footballEngine = require("/Users/aideng/Documents/football/footballSimulationEngine");
+var footballEngine = require("footballSimulationEngine");
 var matchInfo;
 var stop = false;
 var its = 0
