@@ -63,6 +63,8 @@ function getMatch() {
 			clearInterval()
 		} else if (its === (gamelength / 2)) {
 			clearInterval()
+			switchSides()
+			console.log('switched')
 		} else if (its > gamelength) {
 			return
 		} else {

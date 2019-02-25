@@ -1,7 +1,8 @@
 {
   "name": "Lions",
-    "rating": 88,
-  "players": [{
+  "rating": 88,
+  "players": [
+    {
       "name": "Ian Smith",
       "position": "GK",
       "rating": "75",
@@ -15,9 +16,12 @@
         "penalty_taking": "45",
         "jumping": "235"
       },
-      "startPOS": [ 340 , 0],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        340,
+        0
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Fred Smith",
@@ -33,9 +37,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 80, 80 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        80,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Emma Smith",
@@ -51,9 +58,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 230, 80 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        230,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Jim Smith",
@@ -69,9 +79,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 420, 80 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        420,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Emily Smith",
@@ -87,9 +100,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 600, 80 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        600,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Gregory Smith",
@@ -105,9 +121,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 80, 270 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        80,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Arthur Smith",
@@ -123,9 +142,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 230, 270 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        230,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Diane Smith",
@@ -141,9 +163,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 420, 270 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        420,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Colin Smith",
@@ -159,9 +184,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 600, 270 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        600,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Wayne Smith",
@@ -177,9 +205,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 280, 500 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        280,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Aiden Smith",
@@ -195,9 +226,12 @@
         "penalty_taking": "77",
         "jumping": "235"
       },
-      "startPOS": [ 440, 500 ],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        440,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
     }
   ]
 }

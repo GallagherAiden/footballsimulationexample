@@ -1,7 +1,8 @@
 {
   "name": "Tigers",
-    "rating": 88,
-  "players": [{
+  "rating": 88,
+  "players": [
+    {
       "name": "Bill Johnson",
       "position": "GK",
       "rating": "75",
@@ -15,7 +16,10 @@
         "penalty_taking": "43",
         "jumping": "300"
       },
-      "startPOS": [340,0],
+      "startPOS": [
+        340,
+        0
+      ],
       "fitness": 100,
       "injured": false
     },
@@ -34,8 +38,11 @@
         "penalty_taking": "20",
         "jumping": "235"
       },
-      "startPOS": [ 80, 80],
-"fitness": 100,
+      "startPOS": [
+        80,
+        80
+      ],
+      "fitness": 100,
       "injured": false
     },
     {
@@ -52,9 +59,12 @@
         "penalty_taking": "20",
         "jumping": "212"
       },
-      "startPOS": [ 230, 80],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        230,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Jim Johnson",
@@ -70,9 +80,12 @@
         "penalty_taking": "21",
         "jumping": "280"
       },
-      "startPOS": [ 420, 80],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        420,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Georgina Johnson",
@@ -88,9 +101,12 @@
         "penalty_taking": "20",
         "jumping": "299"
       },
-      "startPOS": [ 600, 80],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        600,
+        80
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Lucy Johnson",
@@ -106,9 +122,12 @@
         "penalty_taking": "20",
         "jumping": "250"
       },
-      "startPOS": [ 80, 270],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        80,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Arthur Johnson",
@@ -124,9 +143,12 @@
         "penalty_taking": "1",
         "jumping": "120"
       },
-      "startPOS": [ 230, 270],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        230,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Cameron Johnson",
@@ -142,9 +164,12 @@
         "penalty_taking": "20",
         "jumping": "175"
       },
-      "startPOS": [ 420, 270],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        420,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Gill Johnson",
@@ -160,9 +185,12 @@
         "penalty_taking": "20",
         "jumping": "288"
       },
-      "startPOS": [ 600, 270],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        600,
+        270
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Peter Johnson",
@@ -178,9 +206,12 @@
         "penalty_taking": "20",
         "jumping": "291"
       },
-      "startPOS": [ 280, 500],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        280,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
     },
     {
       "name": "Louise Johnson",
@@ -196,9 +227,12 @@
         "penalty_taking": "20",
         "jumping": "280"
       },
-      "startPOS": [ 440, 500],
-"fitness": 100,
-"injured": false
+      "startPOS": [
+        440,
+        500
+      ],
+      "fitness": 100,
+      "injured": false
     }
   ]
 }

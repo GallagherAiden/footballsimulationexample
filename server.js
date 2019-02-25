@@ -20,21 +20,20 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-let pitchSize =
-
-	//------------------------
-	//    Express Endpoints
-	//------------------------
-	app.all("/", function (req, res) {
-		return res.redirect('/match.html');
-	});
+//------------------------
+//    Express Endpoints
+//------------------------
+app.all("/", function (req, res) {
+	return res.redirect('/match.html');
+});
 
 app.get("/getstartPOS", function (req, res) {
 	readFile("teams/pitch.json").then(function (pitchSize) {
-		readFile("teams/avgPitchTeam1.json").then(function (team1) {
-			readFile("teams/avgPitchTeam2.json").then(function (team2) {
+		readFile("teams/smallPitchTeam1.json").then(function (team1) {
+			readFile("teams/smallPitchTeam2.json").then(function (team2) {
 				footballEngine.initiateGame(team1, team2, pitchSize).then(function (matchSetup) {
 					matchInfo = matchSetup;
+					console.log(matchSetup)
 					processPositions(matchInfo.kickOffTeam, matchInfo.secondTeam, matchInfo).then(function (sendArray) {
 						res.send(sendArray);
 					}).catch(function (error) {
