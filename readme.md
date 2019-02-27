@@ -39,4 +39,4 @@ var gamelength = 12000;
 i.e. `Iteration 50: Closest Player to ball: Louise Johnson,Closest Player to ball: Aiden Smith`
 
 ---
-* See a match example [here](https://youtu.be/yxTXFrAZCdY) - OLD Version
+* See a match example [here](https://www.youtube.com/watch?v=ZuMKhEpWPEI)

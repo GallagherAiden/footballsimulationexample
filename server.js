@@ -7,10 +7,9 @@ var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var async = require("async");
 var http = require("http");
-var footballEngine = require("footballSimulationEngine");
+var footballEngine = require("footballsimulationengine");
 var matchInfo;
-var stop = false;
-var its = 0
+let its;
 
 //---create a new express server-------
 var app = express();
@@ -29,8 +28,8 @@ app.all("/", function (req, res) {
 
 app.get("/getstartPOS", function (req, res) {
 	readFile("teams/pitch.json").then(function (pitchSize) {
-		readFile("teams/smallPitchTeam1.json").then(function (team1) {
-			readFile("teams/smallPitchTeam2.json").then(function (team2) {
+		readFile("teams/Slugs.json").then(function (team1) {
+			readFile("teams/Dragons.json").then(function (team2) {
 				footballEngine.initiateGame(team1, team2, pitchSize).then(function (matchSetup) {
 					matchInfo = matchSetup;
 					console.log(matchSetup)
