@@ -15,5 +15,8 @@
     "express": "^4.16.2",
     "footballsimulationengine": "^2.2.1"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "license": "Aiden"
 }
