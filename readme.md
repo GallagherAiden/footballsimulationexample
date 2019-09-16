@@ -40,3 +40,4 @@ i.e. `Iteration 50: Closest Player to ball: Louise Johnson,Closest Player to bal
 
 ---
 * See a match example [here](https://www.youtube.com/watch?v=ZuMKhEpWPEI)
+* try a match on codesandbox [here](https://codesandbox.io/s/github/GallagherAiden/footballsimulationexample)
